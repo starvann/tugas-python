@@ -1,11 +1,10 @@
-phonelist = []
-for i in range(1,6):
-    nama = input('Masukkan nama pemilik nomor')
-    nomor = input ('Masukkan nomor')
+buku_telepon = {}
 
-    print('\n Phone book')
-    print(nama, '=', nomor)
+for i in range(1, 6):
+    nama = input(f"Masukkan nama: ")
+    no_hp = input(f"Masukkan nomor telepon: ")
+    buku_telepon[nama] = no_hp
 
-print('\nPhone Book'.center(50))
-for index, (nama,nomor) in enumerate(phonelist.items(),1):
-    print(f'{index}. {nama} = {nomor}')
+print("\nBuku Telepon")
+for index, (nama, no_hp) in enumerate(buku_telepon.items(), 1):
+    print(f"{index}. {nama} = {no_hp}")
